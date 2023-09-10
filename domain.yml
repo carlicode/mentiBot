@@ -5,9 +5,12 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - mood_affirm
   - bot_challenge
+  - child_age
+  - ask_general_information
+  - select_group
+  - affirm_enroll
 
 responses:
   utter_greet:
@@ -24,30 +27,30 @@ responses:
 
   utter_country:
   - text: "Selecciona tu país"
-  - buttons:
-    - payload: /Bolivia
+    buttons:
+    - payload: /bolivia
       title: Bolivia
-    - payload: /México
-      title: Mexico
-    - payload: /Otro
+    - payload: /mexico
+      title: México
+    - payload: /other
       title: Otro  
 
   utter_ask_course:
   - text: "¿En qué curso está interesado?"
-    - buttons:
-    - payload: /Programación con Roblox
-      title: Roblox
-    - payload: /Programación con Minecraft
-      title: Minecraft
+    buttons:
+    - payload: /roblox
+      title: Programación con Roblox
+    - payload: /minecraft
+      title: Programación con Minecraft
     - payload: /Resolución de cubo Rubik
-      title: Rubik
-    - payload: /Introducción a la inteligencia artificial
-      title: IA
-    - payload: Otro
-      title: IA
+      title: rubik
+    - payload: /ia
+      title: Introducción a la inteligencia artificial
+    - payload: /other
+      title: Otro
 
-    utter_minecraft:
-    - text: " SEND PDF\n
+  utter_minecraft:
+  - text: " SEND PDF\n
               🤓¿Sabías que tu hijo puede aprender a programar con su juego favorito? ROBLOX Studio sirve para desarrollar juegos desde cero tomando como base la famosa plataforma Roblox. \n
               ⭐ Curso básico\n
               📆 Sesiones: 8\n
@@ -55,22 +58,22 @@ responses:
               ✅ Incluye certificado de participación (digital).\n
               👨‍💻 Edad: 9 a 13 años\n
               💻 Plataforma: Zoom"
-      image: "Minecraft - Horarios.png"
+    image: "Minecraft - Horarios.png"
 
-    utter_ask_group:
-      - text: "¿Alguno de estos grupos se adecua al horario de su niño o niña?"
+  utter_ask_group:
+  - text: "¿Alguno de estos grupos se adecua al horario de su niño o niña?"
 
-    utter_ask_enroll:
-      - text: "¿Gusta proceder a la inscripción?"
+  utter_ask_enroll:
+  - text: "¿Gusta proceder a la inscripción?"
 
-    utter_send_form1:
-      - text: "Llene los datos en el siguiente formulario por favor"
+  utter_send_form1:
+  - text: "Llene los datos en el siguiente formulario por favor"
 
-    utter_send_form2:
-      - text: "https://register.mentiacademy.tech/minecraft"
+  utter_send_form2:
+  - text: "https://register.mentiacademy.tech/minecraft"
 
-    utter_send_form3:
-      - text: "Le pido que me confirme luego de enviar los datos por favor"
+  utter_send_form3:
+    - text: "Le pido que me confirme luego de enviar los datos por favor"
 
   utter_goodbye1:
   - text: "A continuación un asesor humano se comunicará para confirmar los datos de su niño o niña"

@@ -4,27 +4,26 @@ stories:
 
 - story: happy path
   steps:
-  - intent: greet
+  - intent: ask_general_information
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_suggest_human
+  - action: utter_ask_age
+  - intent: child_age
+  - action: utter_perfect_age
+  - action: utter_country
+  - intent: bolivia
+  - action: utter_ask_course
+  - intent: minecraft
+  - action: utter_minecraft
+  - intent: select_group
+  - action: utter_ask_enroll
   - intent: affirm
-  - action: utter_happy
+  - action: utter_send_form1
+  - action: utter_send_form2
+  - action: utter_send_form3
+  - intent: affirm_enroll
+  - action: utter_goodbye1
+  - action: utter_goodbye2
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+
+

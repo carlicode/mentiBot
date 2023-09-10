@@ -11,7 +11,7 @@ nlu:
     - buentas tardes
     - buenas noches 
 
-- intent: bye
+- intent: goodbye
   examples: |
     - adios
     - chao
