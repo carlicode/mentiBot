@@ -11,6 +11,13 @@ intents:
   - ask_general_information
   - select_group
   - affirm_enroll
+  - bolivia
+  - mexico
+  - other
+  - roblox
+  - minecraft
+  - ia
+  - rubik
 
 responses:
   utter_greet:

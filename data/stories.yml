@@ -15,6 +15,7 @@ stories:
   - action: utter_ask_course
   - intent: minecraft
   - action: utter_minecraft
+  - action: utter_ask_group
   - intent: select_group
   - action: utter_ask_enroll
   - intent: affirm
