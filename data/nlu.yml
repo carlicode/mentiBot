@@ -3,89 +3,112 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hola
+    - holis
+    - ola
+    - oli
+    - buen día
+    - buentas tardes
+    - buenas noches 
 
-- intent: goodbye
+- intent: bye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - adios
+    - chao
+    - chau
+    - sayonara
+    - hasta la vista
+    - chaito
+    - bye 
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - si
+    - claro
+    - por supuesto
+    - correcto
+    - excelente
+    - exacto
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - negativo
+    - noooo
+    - para nada
+    - no creo
+    - lo dudo 
+    
+- intent: mood_affirm
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - genial
+    - positivo 
+    - listo
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - ¿eres un bot?
+    - ¿eres un asistente?
+    - estoy hablando con un humano?
+    - eres un humano?
+    - tienes conciencia propia?
+
+- intent: child_age
+  examples: |
+    - tiene 7 años
+    - 8 años
+    - 10 años y 4 meses
+    - seis
+    - siete
+    - ocho
+    - nueve
+    - diez
+    - once
+    - doce
+    - trece
+    - catorce
+    - nueve años
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12 años
+    - 13
+    - 14
+    - su edad es 11
+
+- intent: ask_general_information
+  examples: |
+    - Hola, 
+    - quiero más información
+    - ¿Qué cursos tiene disponible?
+    - información
+    - informacion por favor
+    - quiero saber mas
+    - cuanto cuesta
+    - que precio tiene
+    - precio del curso
+    - ¿Cuándo empieza?
+    - qué fechas de inicio tiene?
+    - ¿De qué son los cursos?
+
+- intent: select_group
+  examples: |
+    - si, el grupo 1
+    - grupo 1
+    - grupo 1 y 4
+    - grupos 2 y 3 
+    - horario 3
+    - el 4
+    - cualquier grupo
+    - 3
+
+- intent: affirm_enroll
+  examples: |
+    - ya envié el formulario
+    - ya lo envié
+    - formulario enviado
+
+
