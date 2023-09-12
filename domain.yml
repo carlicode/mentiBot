@@ -18,6 +18,21 @@ intents:
   - minecraft
   - ia
   - rubik
+  - talk_human
+  - grupo1
+  - grupo2
+  - grupo3
+  - grupo4
+
+entities:
+- age
+slots:
+  age:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: age
 
 responses:
   utter_greet:
@@ -27,10 +42,22 @@ responses:
   - text: "En caso de que quieras hablar con un asesor humano, puedes escribir ASESOR HUMANO en cualquier momento"
 
   utter_ask_age:
-  - text: "¿Qué edad tiene tu niño o niña? Escriba un número 👦🧒"
+  - text: "¿Su hijo o hija tiene entre 7 y 14 años? 👦🧒"
+    buttons:
+    - payload: /affirm
+      title: Si
+    - payload: /deny
+      title: No
 
   utter_perfect_age:
   - text: "Su hij@ está en la edad perfecta para iniciar con el curso 😊"
+
+  utter_non_age:
+  - text: "Comentarle que sólo contamos con cursos para estudiantes de 7 a 14 años"
+  
+  utter_facebook:
+  - text: "Agradecemos que nos pueda seguir en facebook para ver próximos cursos:/n
+            https://www.facebook.com/MentiAcademy"
 
   utter_country:
   - text: "Selecciona tu país"
@@ -49,46 +76,80 @@ responses:
       title: Programación con Roblox
     - payload: /minecraft
       title: Programación con Minecraft
-    - payload: /Resolución de cubo Rubik
-      title: rubik
+    - payload: /rubik
+      title: Resolución de cubo Rubik
     - payload: /ia
       title: Introducción a la inteligencia artificial
-    - payload: /other
+    - payload: /deny
       title: Otro
 
-  utter_minecraft:
+  utter_roblox:
   - text: " SEND PDF\n
               🤓¿Sabías que tu hijo puede aprender a programar con su juego favorito? ROBLOX Studio sirve para desarrollar juegos desde cero tomando como base la famosa plataforma Roblox. \n
               ⭐ Curso básico\n
               📆 Sesiones: 8\n
               ⏰ Duración: 1 Hora c/u\n
               ✅ Incluye certificado de participación (digital).\n
-              👨‍💻 Edad: 9 a 13 años\n
+              👨‍💻 Edad: 8 a 14 años\n
               💻 Plataforma: Zoom"
-    image: "Minecraft - Horarios.png"
+    image: "roblox - Horarios.png"
+
+  utter_minecraft:
+  - text: " SEND PDF\n
+              *Minecraft Education Edition* es la versión educativa del videojuego Minecraft. Esta herramienta permite crear experiencias de Aprendizaje Basado en el Juego con las que se podrán aprender habilidades como:/n
+              ✅ Pensamiento lógico computacional/n
+              ✅ Introducción a la programación/n
+              ✅ Solución de problemas/n
+              ✅ Manejo básico de la computadora/n
+              /n
+              📆 Horarios a elección/n
+              👨‍💻 Edad: 7 a 13 años/n
+              💻 Platafor inma: Zoom/n 
+              ✅ Incluye certificado de participación digital./n"
+    image: "minecraft - Horarios.png"
+
+  utter_rubik:
+  - text: " SEND PDF\n
+              🤓¡Estimula la agilidad mental de tu hijo con nuestro curso de cubo de Rubik!/n
+              🧠 Aumenta la velocidad mental./n
+              🧠 Mejora la capacidad visoespacial./n
+              🧠 Ejercita la concentración./n
+              🧠 Desarrolla la memoria./n
+              /n
+              ✅ Incluye certificado digital/n
+              📆 Número de clases: 8/n
+              ⏰ Duración: 1 Hora c/u/n
+              📆 Horarios a elección/n
+              👨‍💻 Edad: 7 a 13 años/n
+              💻 Plataforma: Zoom /n"
+    image: "rubik - Horarios.png"
 
   utter_ask_group:
   - text: "¿Alguno de estos grupos se adecua al horario de su niño o niña?"
+    buttons:
+    - payload: /affirm
+      title: Si
+    - payload: /deny
+      title: No
+    - payload: /other
+      title: Ninguno
 
   utter_ask_enroll:
   - text: "¿Gusta proceder a la inscripción?"
+    buttons:
+    - payload: /affirm
+      title: Si
+    - payload: /deny
+      title: No
 
   utter_send_form1:
   - text: "Llene los datos en el siguiente formulario por favor"
 
-  utter_send_form2:
-  - text: "https://register.mentiacademy.tech/minecraft"
-
-  utter_send_form3:
-    - text: "Le pido que me confirme luego de enviar los datos por favor"
-
-  utter_goodbye1:
-  - text: "A continuación un asesor humano se comunicará para confirmar los datos de su niño o niña"
-
-  utter_goodbye2:
+  utter_goodbye:
   - text: "Fue un placer ayudarte, hasta pronto 🤖"
-    
 
+  utter_ask_human:
+  - text: ¡Perfecto! un asesor humano se comunicará pronto para ayudarte y proveerte más información. 🤖
 
 session_config:
   session_expiration_time: 60

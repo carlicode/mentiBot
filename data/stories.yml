@@ -2,29 +2,88 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: happy path minecraft
   steps:
   - intent: ask_general_information
   - action: utter_greet
   - action: utter_suggest_human
   - action: utter_ask_age
-  - intent: child_age
-  - action: utter_perfect_age
+  - intent: affirm
   - action: utter_country
   - intent: bolivia
   - action: utter_ask_course
   - intent: minecraft
   - action: utter_minecraft
   - action: utter_ask_group
-  - intent: select_group
+  - intent: affirm
+  - action: utter_ask_enroll
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: utter_ask_human
+
+- story: happy path roblox
+  steps:
+  - intent: ask_general_information
+  - action: utter_greet
+  - action: utter_suggest_human
+  - action: utter_ask_age
+  - intent: affirm
+  - action: utter_country
+  - intent: bolivia
+  - action: utter_ask_course
+  - intent: roblox
+  - action: utter_roblox
+  - action: utter_ask_group
+  - intent: affirm
+  - action: utter_ask_enroll
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: utter_ask_human
+
+
+- story: happy path rubik
+  steps:
+  - intent: ask_general_information
+  - action: utter_greet
+  - action: utter_suggest_human
+  - action: utter_ask_age
+  - intent: affirm
+  - action: utter_country
+  - intent: bolivia
+  - action: utter_ask_course
+  - intent: rubik
+  - action: utter_rubik
+  - action: utter_ask_group
+  - intent: affirm
   - action: utter_ask_enroll
   - intent: affirm
-  - action: utter_send_form1
-  - action: utter_send_form2
-  - action: utter_send_form3
-  - intent: affirm_enroll
-  - action: utter_goodbye1
-  - action: utter_goodbye2
+  - action: utter_ask_human
 
+- story: happy path rubik
+  steps:
+  - intent: ask_general_information
+  - action: utter_greet
+  - action: utter_suggest_human
+  - action: utter_ask_age
+  - intent: affirm
+  - action: utter_country
+  - intent: bolivia
+  - action: utter_ask_course
+  - intent: rubik
+  - action: utter_rubik
+  - action: utter_ask_group
+  - intent: affirm
+  - action: utter_ask_enroll
+  - intent: deny
+  - action: utter_ask_human
 
-
+- story: happy path 1
+  steps:
+  - intent: ask_general_information
+  - action: utter_greet
+  - action: utter_suggest_human
+  - action: utter_ask_age
+  - intent: deny
+  - action: utter_ask_human 

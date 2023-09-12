@@ -56,7 +56,7 @@ nlu:
 - intent: child_age
   examples: |
     - tiene 7 años
-    - 8 años
+    - 8años
     - 10 años y 4 meses
     - seis
     - siete
@@ -74,10 +74,11 @@ nlu:
     - 9
     - 10
     - 11
-    - 12 años
+    - 12
     - 13
     - 14
     - su edad es 11
+    - tiene una edad de 10
 
 - intent: ask_general_information
   examples: |
@@ -110,5 +111,24 @@ nlu:
     - ya envié el formulario
     - ya lo envié
     - formulario enviado
+    - enviado
 
+- intent: talk_human
+    - quiero hablar con un humano
+    - ASESOR HUMANO
+    - asesor humano
+    - hay un humano ahí?
+    - quiero hablar con una persona
+    - hablar con persona real
+    - persona real
+
+- intent: affirm_age
+    - si, tiene 7 años
+    - si tiene 8 años
+    - claro tiene 11
+
+- intent: deny_age
+    - no, tiene 16
+    - tiene 5
+    - 3 años
 
